@@ -1,0 +1,31 @@
+{
+  "id": "com.effiraenergy.hub",
+  "version": "1.0.0",
+  "compatibility": ">=12.4.0",
+  "sdk": 3,
+  "runtime": "nodejs",
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "name": {
+    "en": "Effira"
+  },
+  "description": {
+    "en": "Adds support for Effira Energy OPTi devices"
+  },
+  "brandColor": "#062121",
+  "category": [
+    "energy"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Kenny Eliasson",
+    "email": "kennyeliasson@gmail.com"
+  }
+}

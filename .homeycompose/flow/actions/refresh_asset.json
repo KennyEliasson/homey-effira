@@ -1,0 +1,12 @@
+{
+  "title": {
+    "en": "Refresh Effira asset"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=effira_asset"
+    }
+  ]
+}

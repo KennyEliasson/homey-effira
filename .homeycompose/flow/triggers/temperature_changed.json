@@ -1,0 +1,28 @@
+{
+  "title": {
+    "en": "Temperature changed"
+  },
+  "tokens": [
+    {
+      "name": "temperature_c",
+      "type": "number",
+      "title": {
+        "en": "Temperature"
+      }
+    },
+    {
+      "name": "previous_temperature_c",
+      "type": "number",
+      "title": {
+        "en": "Previous temperature"
+      }
+    }
+  ],
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=effira_asset"
+    }
+  ]
+}

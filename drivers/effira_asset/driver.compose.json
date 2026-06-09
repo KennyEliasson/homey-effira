@@ -1,0 +1,132 @@
+{
+  "name": {
+    "en": "Effira OPTi"
+  },
+  "class": "other",
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "connectivity": [
+    "cloud"
+  ],
+  "images": {
+    "small": "/drivers/effira_asset/assets/images/small.png",
+    "large": "/drivers/effira_asset/assets/images/large.png"
+  },
+  "capabilities": [
+    "measure_temperature",
+    "alarm_generic",
+    "effira_control_state",
+    "effira_heatpump_consumption_day",
+    "meter_heatpump_consumption_last_hour"
+  ],
+  "capabilitiesOptions": {
+    
+    "alarm_generic": {
+      "title": {
+        "en": "Offline",
+        "sv": "Offline"
+      },
+      "titleTrue": {
+        "en": "Offline",
+        "sv": "Offline"
+      },
+      "titleFalse": {
+        "en": "Online",
+        "sv": "Online"
+      },
+      "insightsTitleTrue": {
+        "en": "Device went offline",
+        "sv": "Enheten gick offline"
+      },
+      "insightsTitleFalse": {
+        "en": "Device came online",
+        "sv": "Enheten kom online"
+      }
+    }
+    
+  },
+  "pair": [
+    {
+      "id": "login_credentials",
+      "template": "login_credentials",
+      "navigation": {
+        "next": "list_devices"
+      },
+      "options": {
+        "title": {
+          "en": "Connect to Effira"
+        },
+        "usernameLabel": {
+          "en": "Key ID"
+        },
+        "usernamePlaceholder": {
+          "en": "API Key ID"
+        },
+        "passwordLabel": {
+          "en": "Secret"
+        },
+        "passwordPlaceholder": {
+          "en": "API Key secret"
+        }
+      }
+    },
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      },
+      "options": {
+        "singular": true
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ],
+  "settings": [
+    {
+      "id": "assetId",
+      "type": "text",
+      "label": {
+        "en": "Asset ID"
+      },
+      "value": ""
+    },
+    {
+      "id": "clientId",
+      "type": "text",
+      "label": {
+        "en": "Client ID"
+      },
+      "value": ""
+    },
+    {
+      "id": "keyId",
+      "type": "text",
+      "label": {
+        "en": "Key ID"
+      },
+      "value": ""
+    },
+    {
+      "id": "secret",
+      "type": "password",
+      "label": {
+        "en": "Secret"
+      },
+      "value": ""
+    },
+    {
+      "id": "sensorId",
+      "type": "text",
+      "label": {
+        "en": "Sensor ID"
+      },
+      "value": ""
+    }
+  ]
+}

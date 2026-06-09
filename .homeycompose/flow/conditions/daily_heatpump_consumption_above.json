@@ -1,0 +1,21 @@
+{
+  "title": {
+    "en": "Daily heatpump consumption is above"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=effira_asset"
+    },
+    {
+      "name": "threshold_kwh",
+      "type": "number",
+      "title": {
+        "en": "Threshold kWh"
+      },
+      "min": 0,
+      "step": 0.1
+    }
+  ]
+}

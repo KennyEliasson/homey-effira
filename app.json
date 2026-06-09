@@ -1,0 +1,703 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.effiraenergy.hub",
+  "version": "1.0.0",
+  "compatibility": ">=12.4.0",
+  "sdk": 3,
+  "runtime": "nodejs",
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "name": {
+    "en": "Effira"
+  },
+  "description": {
+    "en": "Adds support for Effira Energy OPTi devices"
+  },
+  "brandColor": "#062121",
+  "category": [
+    "energy"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Kenny Eliasson",
+    "email": "kennyeliasson@gmail.com"
+  },
+  "flow": {
+    "triggers": [
+      {
+        "title": {
+          "en": "Daily heatpump consumption changed"
+        },
+        "tokens": [
+          {
+            "name": "consumption_kwh",
+            "type": "number",
+            "title": {
+              "en": "Consumption kWh"
+            }
+          },
+          {
+            "name": "previous_consumption_kwh",
+            "type": "number",
+            "title": {
+              "en": "Previous consumption kWh"
+            }
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=effira_asset"
+          }
+        ],
+        "id": "heatpump_consumption_changed"
+      },
+      {
+        "title": {
+          "en": "Planned control changed"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=effira_asset"
+          },
+          {
+            "name": "state",
+            "type": "dropdown",
+            "title": {
+              "en": "State"
+            },
+            "values": [
+              {
+                "id": "any",
+                "title": {
+                  "en": "Any"
+                }
+              },
+              {
+                "id": "boost",
+                "title": {
+                  "en": "Boost"
+                }
+              },
+              {
+                "id": "idle",
+                "title": {
+                  "en": "Idle"
+                }
+              },
+              {
+                "id": "rampdown",
+                "title": {
+                  "en": "Rampdown"
+                }
+              },
+              {
+                "id": "stop",
+                "title": {
+                  "en": "Stop"
+                }
+              },
+              {
+                "id": "unknown",
+                "title": {
+                  "en": "Unknown"
+                }
+              }
+            ]
+          }
+        ],
+        "tokens": [
+          {
+            "name": "state",
+            "type": "string",
+            "title": {
+              "en": "State"
+            }
+          },
+          {
+            "name": "previous_state",
+            "type": "string",
+            "title": {
+              "en": "Previous state"
+            }
+          }
+        ],
+        "id": "planned_control_changed"
+      },
+      {
+        "title": {
+          "en": "Previous hour heatpump consumption changed",
+          "sv": "Föregående timmes värmepumpsförbrukning ändrades"
+        },
+        "tokens": [
+          {
+            "name": "consumption_kwh",
+            "type": "number",
+            "title": {
+              "en": "Consumption kWh",
+              "sv": "Förbrukning kWh"
+            }
+          },
+          {
+            "name": "previous_consumption_kwh",
+            "type": "number",
+            "title": {
+              "en": "Previous consumption kWh",
+              "sv": "Föregående förbrukning kWh"
+            }
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=effira_asset"
+          }
+        ],
+        "id": "previous_hour_heatpump_consumption_changed"
+      },
+      {
+        "title": {
+          "en": "Temperature changed"
+        },
+        "tokens": [
+          {
+            "name": "temperature_c",
+            "type": "number",
+            "title": {
+              "en": "Temperature"
+            }
+          },
+          {
+            "name": "previous_temperature_c",
+            "type": "number",
+            "title": {
+              "en": "Previous temperature"
+            }
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=effira_asset"
+          }
+        ],
+        "id": "temperature_changed"
+      }
+    ],
+    "conditions": [
+      {
+        "title": {
+          "en": "Daily heatpump consumption is above"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=effira_asset"
+          },
+          {
+            "name": "threshold_kwh",
+            "type": "number",
+            "title": {
+              "en": "Threshold kWh"
+            },
+            "min": 0,
+            "step": 0.1
+          }
+        ],
+        "id": "daily_heatpump_consumption_above"
+      },
+      {
+        "title": {
+          "en": "Daily heatpump consumption is below",
+          "sv": "Dagens värmepumpsförbrukning är under"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=effira_asset"
+          },
+          {
+            "name": "threshold_kwh",
+            "type": "number",
+            "title": {
+              "en": "Threshold kWh",
+              "sv": "Gränsvärde kWh"
+            },
+            "min": 0,
+            "step": 0.1
+          }
+        ],
+        "id": "daily_heatpump_consumption_below"
+      },
+      {
+        "title": {
+          "en": "Previous hour heatpump consumption is above",
+          "sv": "Föregående timmes värmepumpsförbrukning är över"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=effira_asset"
+          },
+          {
+            "name": "threshold_kwh",
+            "type": "number",
+            "title": {
+              "en": "Threshold kWh",
+              "sv": "Gränsvärde kWh"
+            },
+            "min": 0,
+            "step": 0.1
+          }
+        ],
+        "id": "previous_hour_heatpump_consumption_above"
+      },
+      {
+        "title": {
+          "en": "Previous hour heatpump consumption is below",
+          "sv": "Föregående timmes värmepumpsförbrukning är under"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=effira_asset"
+          },
+          {
+            "name": "threshold_kwh",
+            "type": "number",
+            "title": {
+              "en": "Threshold kWh",
+              "sv": "Gränsvärde kWh"
+            },
+            "min": 0,
+            "step": 0.1
+          }
+        ],
+        "id": "previous_hour_heatpump_consumption_below"
+      },
+      {
+        "title": {
+          "en": "Temperature is above"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=effira_asset"
+          },
+          {
+            "name": "threshold_c",
+            "type": "number",
+            "title": {
+              "en": "Threshold °C"
+            },
+            "step": 0.1
+          }
+        ],
+        "id": "temperature_above"
+      },
+      {
+        "title": {
+          "en": "Temperature is below"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=effira_asset"
+          },
+          {
+            "name": "threshold_c",
+            "type": "number",
+            "title": {
+              "en": "Threshold °C"
+            },
+            "step": 0.1
+          }
+        ],
+        "id": "temperature_below"
+      }
+    ],
+    "actions": [
+      {
+        "title": {
+          "en": "Clear manual plan"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=effira_asset"
+          }
+        ],
+        "id": "clear_manual_plan"
+      },
+      {
+        "title": {
+          "en": "Refresh Effira asset"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=effira_asset"
+          }
+        ],
+        "id": "refresh_asset"
+      },
+      {
+        "title": {
+          "en": "Set manual plan"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=effira_asset"
+          },
+          {
+            "name": "action",
+            "type": "dropdown",
+            "title": {
+              "en": "Action"
+            },
+            "values": [
+              {
+                "id": "boost",
+                "title": {
+                  "en": "Boost"
+                }
+              },
+              {
+                "id": "normal",
+                "title": {
+                  "en": "Normal"
+                }
+              },
+              {
+                "id": "stop",
+                "title": {
+                  "en": "Stop"
+                }
+              }
+            ]
+          },
+          {
+            "name": "start",
+            "type": "text",
+            "title": {
+              "en": "Start UTC"
+            },
+            "placeholder": {
+              "en": "2026-05-06T10:15:00.000Z"
+            }
+          },
+          {
+            "name": "end",
+            "type": "text",
+            "title": {
+              "en": "End UTC"
+            },
+            "placeholder": {
+              "en": "2026-05-06T11:00:00.000Z"
+            }
+          }
+        ],
+        "id": "set_manual_plan"
+      },
+      {
+        "title": {
+          "en": "Set manual plan from now"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=effira_asset"
+          },
+          {
+            "name": "action",
+            "type": "dropdown",
+            "title": {
+              "en": "Action"
+            },
+            "values": [
+              {
+                "id": "boost",
+                "title": {
+                  "en": "Boost"
+                }
+              },
+              {
+                "id": "normal",
+                "title": {
+                  "en": "Normal"
+                }
+              },
+              {
+                "id": "stop",
+                "title": {
+                  "en": "Stop"
+                }
+              }
+            ]
+          },
+          {
+            "name": "duration_minutes",
+            "type": "number",
+            "title": {
+              "en": "Duration minutes"
+            },
+            "min": 15,
+            "step": 15
+          }
+        ],
+        "id": "set_manual_plan_from_now"
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "Effira OPTi"
+      },
+      "class": "other",
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "connectivity": [
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/effira_asset/assets/images/small.png",
+        "large": "/drivers/effira_asset/assets/images/large.png"
+      },
+      "capabilities": [
+        "measure_temperature",
+        "alarm_generic",
+        "effira_control_state",
+        "effira_heatpump_consumption_day",
+        "meter_heatpump_consumption_last_hour"
+      ],
+      "capabilitiesOptions": {
+        "alarm_generic": {
+          "title": {
+            "en": "Offline",
+            "sv": "Offline"
+          },
+          "titleTrue": {
+            "en": "Offline",
+            "sv": "Offline"
+          },
+          "titleFalse": {
+            "en": "Online",
+            "sv": "Online"
+          },
+          "insightsTitleTrue": {
+            "en": "Device went offline",
+            "sv": "Enheten gick offline"
+          },
+          "insightsTitleFalse": {
+            "en": "Device came online",
+            "sv": "Enheten kom online"
+          }
+        }
+      },
+      "pair": [
+        {
+          "id": "login_credentials",
+          "template": "login_credentials",
+          "navigation": {
+            "next": "list_devices"
+          },
+          "options": {
+            "title": {
+              "en": "Connect to Effira"
+            },
+            "usernameLabel": {
+              "en": "Key ID"
+            },
+            "usernamePlaceholder": {
+              "en": "API Key ID"
+            },
+            "passwordLabel": {
+              "en": "Secret"
+            },
+            "passwordPlaceholder": {
+              "en": "API Key secret"
+            }
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": true
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "id": "assetId",
+          "type": "text",
+          "label": {
+            "en": "Asset ID"
+          },
+          "value": ""
+        },
+        {
+          "id": "clientId",
+          "type": "text",
+          "label": {
+            "en": "Client ID"
+          },
+          "value": ""
+        },
+        {
+          "id": "keyId",
+          "type": "text",
+          "label": {
+            "en": "Key ID"
+          },
+          "value": ""
+        },
+        {
+          "id": "secret",
+          "type": "password",
+          "label": {
+            "en": "Secret"
+          },
+          "value": ""
+        },
+        {
+          "id": "sensorId",
+          "type": "text",
+          "label": {
+            "en": "Sensor ID"
+          },
+          "value": ""
+        }
+      ],
+      "id": "effira_asset"
+    }
+  ],
+  "capabilities": {
+    "effira_control_state": {
+      "type": "enum",
+      "title": {
+        "en": "Control mode",
+        "sv": "Driftläge"
+      },
+      "values": [
+        {
+          "id": "boost",
+          "title": {
+            "en": "Boost",
+            "sv": "Boost"
+          }
+        },
+        {
+          "id": "idle",
+          "title": {
+            "en": "Normal",
+            "sv": "Normal"
+          }
+        },
+        {
+          "id": "rampdown",
+          "title": {
+            "en": "Rampdown",
+            "sv": "Nedtrappning"
+          }
+        },
+        {
+          "id": "stop",
+          "title": {
+            "en": "Stop",
+            "sv": "Stopp"
+          }
+        },
+        {
+          "id": "unknown",
+          "title": {
+            "en": "Unknown",
+            "sv": "Okänd"
+          }
+        }
+      ],
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/dashboard.svg"
+    },
+    "effira_heatpump_consumption_day": {
+      "type": "number",
+      "title": {
+        "en": "Heatpump consumption today",
+        "sv": "Värmepumpsförbrukning idag"
+      },
+      "units": {
+        "en": "kWh"
+      },
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/electric.svg"
+    },
+    "effira_temperature": {
+      "type": "number",
+      "title": {
+        "en": "Indoor temperature",
+        "sv": "Inomhus temperatur"
+      },
+      "units": {
+        "en": "°C"
+      },
+      "decimals": 1,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "meter_heatpump_consumption_last_hour": {
+      "type": "number",
+      "title": {
+        "en": "Heatpump consumption previous hour",
+        "sv": "Värmepumpsförbrukning föregående timme"
+      },
+      "units": {
+        "en": "kWh",
+        "sv": "kWh"
+      },
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/electric.svg"
+    }
+  }
+}

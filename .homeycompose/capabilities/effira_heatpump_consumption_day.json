@@ -1,0 +1,15 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Heatpump consumption today",
+    "sv": "Värmepumpsförbrukning idag"
+  },
+  "units": {
+    "en": "kWh"
+  },
+  "decimals": 2,
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/electric.svg"
+}

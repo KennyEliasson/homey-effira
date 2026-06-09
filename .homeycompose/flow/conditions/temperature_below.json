@@ -1,0 +1,20 @@
+{
+  "title": {
+    "en": "Temperature is below"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=effira_asset"
+    },
+    {
+      "name": "threshold_c",
+      "type": "number",
+      "title": {
+        "en": "Threshold °C"
+      },
+      "step": 0.1
+    }
+  ]
+}

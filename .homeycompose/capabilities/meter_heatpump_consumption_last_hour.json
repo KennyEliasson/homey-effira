@@ -1,0 +1,16 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Heatpump consumption previous hour",
+    "sv": "Värmepumpsförbrukning föregående timme"
+  },
+  "units": {
+    "en": "kWh",
+    "sv": "kWh"
+  },
+  "decimals": 2,
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/electric.svg"
+}

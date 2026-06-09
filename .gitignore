@@ -1,0 +1,8 @@
+/env.json
+/node_modules/
+/.homeybuild/
+/.idea
+env.json
+node_modules/
+build/
+.DS_Store

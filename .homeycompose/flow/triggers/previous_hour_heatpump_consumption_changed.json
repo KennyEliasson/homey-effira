@@ -1,0 +1,31 @@
+{
+  "title": {
+    "en": "Previous hour heatpump consumption changed",
+    "sv": "Föregående timmes värmepumpsförbrukning ändrades"
+  },
+  "tokens": [
+    {
+      "name": "consumption_kwh",
+      "type": "number",
+      "title": {
+        "en": "Consumption kWh",
+        "sv": "Förbrukning kWh"
+      }
+    },
+    {
+      "name": "previous_consumption_kwh",
+      "type": "number",
+      "title": {
+        "en": "Previous consumption kWh",
+        "sv": "Föregående förbrukning kWh"
+      }
+    }
+  ],
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=effira_asset"
+    }
+  ]
+}

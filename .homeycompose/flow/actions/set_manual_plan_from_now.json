@@ -1,0 +1,48 @@
+{
+  "title": {
+    "en": "Set manual plan from now"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=effira_asset"
+    },
+    {
+      "name": "action",
+      "type": "dropdown",
+      "title": {
+        "en": "Action"
+      },
+      "values": [
+        {
+          "id": "boost",
+          "title": {
+            "en": "Boost"
+          }
+        },
+        {
+          "id": "normal",
+          "title": {
+            "en": "Normal"
+          }
+        },
+        {
+          "id": "stop",
+          "title": {
+            "en": "Stop"
+          }
+        }
+      ]
+    },
+    {
+      "name": "duration_minutes",
+      "type": "number",
+      "title": {
+        "en": "Duration minutes"
+      },
+      "min": 15,
+      "step": 15
+    }
+  ]
+}

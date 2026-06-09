@@ -1,0 +1,28 @@
+{
+  "title": {
+    "en": "Daily heatpump consumption changed"
+  },
+  "tokens": [
+    {
+      "name": "consumption_kwh",
+      "type": "number",
+      "title": {
+        "en": "Consumption kWh"
+      }
+    },
+    {
+      "name": "previous_consumption_kwh",
+      "type": "number",
+      "title": {
+        "en": "Previous consumption kWh"
+      }
+    }
+  ],
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=effira_asset"
+    }
+  ]
+}

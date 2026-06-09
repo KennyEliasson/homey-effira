@@ -1,0 +1,14 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Indoor temperature",
+    "sv": "Inomhus temperatur"
+  },
+  "units": {
+    "en": "°C"
+  },
+  "decimals": 1,
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor"
+}

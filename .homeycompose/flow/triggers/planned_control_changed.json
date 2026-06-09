@@ -1,0 +1,73 @@
+{
+  "title": {
+    "en": "Planned control changed"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=effira_asset"
+    },
+    {
+      "name": "state",
+      "type": "dropdown",
+      "title": {
+        "en": "State"
+      },
+      "values": [
+        {
+          "id": "any",
+          "title": {
+            "en": "Any"
+          }
+        },
+        {
+          "id": "boost",
+          "title": {
+            "en": "Boost"
+          }
+        },
+        {
+          "id": "idle",
+          "title": {
+            "en": "Idle"
+          }
+        },
+        {
+          "id": "rampdown",
+          "title": {
+            "en": "Rampdown"
+          }
+        },
+        {
+          "id": "stop",
+          "title": {
+            "en": "Stop"
+          }
+        },
+        {
+          "id": "unknown",
+          "title": {
+            "en": "Unknown"
+          }
+        }
+      ]
+    }
+  ],
+  "tokens": [
+    {
+      "name": "state",
+      "type": "string",
+      "title": {
+        "en": "State"
+      }
+    },
+    {
+      "name": "previous_state",
+      "type": "string",
+      "title": {
+        "en": "Previous state"
+      }
+    }
+  ]
+}

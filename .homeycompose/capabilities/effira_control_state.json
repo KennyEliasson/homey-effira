@@ -1,0 +1,48 @@
+{
+  "type": "enum",
+  "title": {
+    "en": "Control mode",
+    "sv": "Driftläge"
+  },
+  "values": [
+    {
+      "id": "boost",
+      "title": {
+        "en": "Boost",
+        "sv": "Boost"
+      }
+    },
+    {
+      "id": "idle",
+      "title": {
+        "en": "Normal",
+        "sv": "Normal"
+      }
+    },
+    {
+      "id": "rampdown",
+      "title": {
+        "en": "Rampdown",
+        "sv": "Nedtrappning"
+      }
+    },
+    {
+      "id": "stop",
+      "title": {
+        "en": "Stop",
+        "sv": "Stopp"
+      }
+    },
+    {
+      "id": "unknown",
+      "title": {
+        "en": "Unknown",
+        "sv": "Okänd"
+      }
+    }
+  ],
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/dashboard.svg"
+}
