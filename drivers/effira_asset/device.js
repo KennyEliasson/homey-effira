@@ -84,7 +84,7 @@ module.exports = class EffiraAssetDevice extends Homey.Device {
       ] =
         await Promise.all([
           this.api.getCurrentStatus(assetId),
-          this.api.getLatestTemperature(assetId, settings.sensorId || null),
+          this.api.getLatestTemperature(assetId),
           this.api.getManualPlan(assetId),
           this.api.getDailyHeatpumpConsumption(assetId),
           this.api.getPreviousHourHeatpumpConsumption(assetId),
