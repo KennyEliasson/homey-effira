@@ -1,5 +1,5 @@
 {
-  "id": "com.effiraenergy.hub",
+  "id": "com.kennyeliasson.effira",
   "version": "1.0.0",
   "compatibility": ">=12.4.0",
   "sdk": 3,
@@ -9,10 +9,12 @@
     "cloud"
   ],
   "name": {
-    "en": "Effira"
+    "en": "Effira Community",
+    "sv": "Effira Community"
   },
   "description": {
-    "en": "Adds support for Effira Energy OPTi devices"
+    "en": "Unofficial Homey app for Effira Energy devices. Community-maintained and not affiliated with or endorsed by Effira Energy.",
+    "sv": "Inofficiell Homey-app for Effira Energy-enheter. Underhalls av communityn och ar inte ansluten till eller godkand av Effira Energy."
   },
   "brandColor": "#062121",
   "category": [
