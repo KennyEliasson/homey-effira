@@ -7,13 +7,47 @@ const mode = process.argv[2];
 
 const MODES = {
   'cloud-dev': {
+    appId: 'com.kennyeliasson.effira.beta',
+    appName: {
+      en: 'Effira Community Beta',
+      sv: 'Effira Community Beta',
+    },
     appPlatforms: ['local', 'cloud'],
     driverPlatforms: ['local', 'cloud'],
     flowPlatforms: ['local', 'cloud'],
     driverConnectivity: ['cloud'],
     apiBaseUrl: 'https://unstable-developers.enerflex.cloud/api/v1',
   },
+  'beta-release': {
+    appId: 'com.kennyeliasson.effira.beta',
+    appName: {
+      en: 'Effira Community Beta',
+      sv: 'Effira Community Beta',
+    },
+    appPlatforms: ['local'],
+    driverPlatforms: ['local'],
+    flowPlatforms: ['local'],
+    driverConnectivity: ['cloud'],
+    apiBaseUrl: 'https://unstable-developers.enerflex.cloud/api/v1',
+  },
+  'prod-release': {
+    appId: 'com.kennyeliasson.effira',
+    appName: {
+      en: 'Effira Community',
+      sv: 'Effira Community',
+    },
+    appPlatforms: ['local', 'cloud'],
+    driverPlatforms: ['local', 'cloud'],
+    flowPlatforms: ['local', 'cloud'],
+    driverConnectivity: ['cloud'],
+    apiBaseUrl: 'https://developers.enerflex.cloud/api/v1',
+  },
   'local-release': {
+    appId: 'com.kennyeliasson.effira',
+    appName: {
+      en: 'Effira Community',
+      sv: 'Effira Community',
+    },
     appPlatforms: ['local'],
     driverPlatforms: ['local'],
     flowPlatforms: ['local'],
@@ -84,6 +118,8 @@ function setPlatformsOnComposeFlows() {
 function setPlatformsOnComposeApp() {
   const relativePath = path.join('.homeycompose', 'app.json');
   const appManifest = readJson(relativePath);
+  appManifest.id = config.appId;
+  appManifest.name = config.appName;
   appManifest.platforms = config.appPlatforms;
   writeJson(relativePath, appManifest);
 }
@@ -100,6 +136,8 @@ function setPlatformsOnBuiltApp() {
   const relativePath = path.join('app.json');
   const appManifest = readJson(relativePath);
 
+  appManifest.id = config.appId;
+  appManifest.name = config.appName;
   appManifest.platforms = config.appPlatforms;
 
   if (appManifest.flow) {
