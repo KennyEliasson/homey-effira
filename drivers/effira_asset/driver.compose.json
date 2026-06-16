@@ -12,7 +12,8 @@
   ],
   "images": {
     "small": "/drivers/effira_asset/assets/images/small.png",
-    "large": "/drivers/effira_asset/assets/images/large.png"
+    "large": "/drivers/effira_asset/assets/images/large.png",
+    "xlarge": "/drivers/effira_asset/assets/images/xlarge.png"
   },
   "capabilities": [
     "measure_temperature",

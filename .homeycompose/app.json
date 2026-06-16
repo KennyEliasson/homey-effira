@@ -13,8 +13,8 @@
     "sv": "Effira Community"
   },
   "description": {
-    "en": "Unofficial Homey app for Effira Energy devices. Community-maintained and not affiliated with or endorsed by Effira Energy.",
-    "sv": "Inofficiell Homey-app for Effira Energy-enheter. Underhalls av communityn och ar inte ansluten till eller godkand av Effira Energy."
+    "en": "Monitor and automate your heat pump control with Effira Energy OPTi.",
+    "sv": "Övervaka och automatisera din värmepumsstyrning med Effira Energy OPTi."
   },
   "brandColor": "#062121",
   "category": [

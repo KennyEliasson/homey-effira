@@ -2,6 +2,9 @@
   "title": {
     "en": "Daily heatpump consumption is above"
   },
+  "titleFormatted": {
+    "en": "Daily heatpump consumption is above [[threshold_kwh]] kWh"
+  },
   "args": [
     {
       "name": "device",

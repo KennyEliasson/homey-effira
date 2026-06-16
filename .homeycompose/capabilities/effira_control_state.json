@@ -1,7 +1,7 @@
 {
   "type": "enum",
   "title": {
-    "en": "Control mode04",
+    "en": "Control mode",
     "sv": "Driftläge"
   },
   "values": [

@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
+    "prepare:cloud-dev": "node scripts/set-homey-mode.js cloud-dev",
+    "prepare:local-release": "node scripts/set-homey-mode.js local-release",
     "lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
     "check": "node --check app.js && node --check lib/effira-api-client.js && node --check drivers/effira_asset/driver.js && node --check drivers/effira_asset/device.js"
   },

@@ -2,6 +2,9 @@
   "title": {
     "en": "Planned control changed"
   },
+  "titleFormatted": {
+    "en": "Planned control changed to [[state]]"
+  },
   "args": [
     {
       "name": "device",

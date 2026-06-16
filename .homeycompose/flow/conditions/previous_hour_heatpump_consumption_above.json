@@ -3,6 +3,10 @@
     "en": "Previous hour heatpump consumption is above",
     "sv": "Föregående timmes värmepumpsförbrukning är över"
   },
+  "titleFormatted": {
+    "en": "Previous hour heatpump consumption is above [[threshold_kwh]] kWh",
+    "sv": "Föregående timmes värmepumpsförbrukning är över [[threshold_kwh]] kWh"
+  },
   "args": [
     {
       "name": "device",

@@ -2,6 +2,9 @@
   "title": {
     "en": "Temperature is above"
   },
+  "titleFormatted": {
+    "en": "Temperature is above [[threshold_c]] °C"
+  },
   "args": [
     {
       "name": "device",

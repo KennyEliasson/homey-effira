@@ -2,6 +2,9 @@
   "title": {
     "en": "Set manual plan from now"
   },
+  "titleFormatted": {
+    "en": "Set manual plan to [[action]] for [[duration_minutes]] minutes"
+  },
   "args": [
     {
       "name": "device",

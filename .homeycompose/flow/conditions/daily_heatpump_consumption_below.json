@@ -3,6 +3,10 @@
     "en": "Daily heatpump consumption is below",
     "sv": "Dagens värmepumpsförbrukning är under"
   },
+  "titleFormatted": {
+    "en": "Daily heatpump consumption is below [[threshold_kwh]] kWh",
+    "sv": "Dagens värmepumpsförbrukning är under [[threshold_kwh]] kWh"
+  },
   "args": [
     {
       "name": "device",

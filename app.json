@@ -14,8 +14,8 @@
     "sv": "Effira Community"
   },
   "description": {
-    "en": "Unofficial Homey app for Effira Energy devices.",
-    "sv": "Inofficiell Homey-app for Effira Energy-enheter."
+    "en": "Monitor and automate your heat pump control with Effira Energy OPTi.",
+    "sv": "Övervaka och automatisera din värmepumsstyrning med Effira Energy OPTi."
   },
   "brandColor": "#062121",
   "category": [
@@ -65,6 +65,9 @@
       {
         "title": {
           "en": "Planned control changed"
+        },
+        "titleFormatted": {
+          "en": "Planned control changed to [[state]]"
         },
         "args": [
           {
