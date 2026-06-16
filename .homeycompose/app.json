@@ -1,12 +1,11 @@
 {
   "id": "com.kennyeliasson.effira",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "compatibility": ">=12.4.0",
   "sdk": 3,
   "runtime": "nodejs",
   "platforms": [
-    "local",
-    "cloud"
+    "local"
   ],
   "name": {
     "en": "Effira Community",

@@ -1,5 +1,11 @@
 {
   "1.0.0": {
     "en": "First version!"
+  },
+  "0.0.1": {
+    "en": "First intial release of controlling Effira OPTi connected to your heat pump"
+  },
+  "0.0.2": {
+    "en": "Updated asset images"
   }
 }

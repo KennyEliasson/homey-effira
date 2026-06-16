@@ -1,13 +1,12 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "com.kennyeliasson.effira",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "compatibility": ">=12.4.0",
   "sdk": 3,
   "runtime": "nodejs",
   "platforms": [
-    "local",
-    "cloud"
+    "local"
   ],
   "name": {
     "en": "Effira Community",
@@ -59,6 +58,9 @@
             "type": "device",
             "filter": "driver_id=effira_asset"
           }
+        ],
+        "platforms": [
+          "local"
         ],
         "id": "heatpump_consumption_changed"
       },
@@ -137,6 +139,9 @@
             }
           }
         ],
+        "platforms": [
+          "local"
+        ],
         "id": "planned_control_changed"
       },
       {
@@ -169,6 +174,9 @@
             "filter": "driver_id=effira_asset"
           }
         ],
+        "platforms": [
+          "local"
+        ],
         "id": "previous_hour_heatpump_consumption_changed"
       },
       {
@@ -198,6 +206,9 @@
             "filter": "driver_id=effira_asset"
           }
         ],
+        "platforms": [
+          "local"
+        ],
         "id": "temperature_changed"
       }
     ],
@@ -205,6 +216,9 @@
       {
         "title": {
           "en": "Daily heatpump consumption is above"
+        },
+        "titleFormatted": {
+          "en": "Daily heatpump consumption is above [[threshold_kwh]] kWh"
         },
         "args": [
           {
@@ -222,12 +236,19 @@
             "step": 0.1
           }
         ],
+        "platforms": [
+          "local"
+        ],
         "id": "daily_heatpump_consumption_above"
       },
       {
         "title": {
           "en": "Daily heatpump consumption is below",
           "sv": "Dagens värmepumpsförbrukning är under"
+        },
+        "titleFormatted": {
+          "en": "Daily heatpump consumption is below [[threshold_kwh]] kWh",
+          "sv": "Dagens värmepumpsförbrukning är under [[threshold_kwh]] kWh"
         },
         "args": [
           {
@@ -245,6 +266,9 @@
             "min": 0,
             "step": 0.1
           }
+        ],
+        "platforms": [
+          "local"
         ],
         "id": "daily_heatpump_consumption_below"
       },
@@ -253,6 +277,10 @@
           "en": "Previous hour heatpump consumption is above",
           "sv": "Föregående timmes värmepumpsförbrukning är över"
         },
+        "titleFormatted": {
+          "en": "Previous hour heatpump consumption is above [[threshold_kwh]] kWh",
+          "sv": "Föregående timmes värmepumpsförbrukning är över [[threshold_kwh]] kWh"
+        },
         "args": [
           {
             "name": "device",
@@ -269,6 +297,9 @@
             "min": 0,
             "step": 0.1
           }
+        ],
+        "platforms": [
+          "local"
         ],
         "id": "previous_hour_heatpump_consumption_above"
       },
@@ -277,6 +308,10 @@
           "en": "Previous hour heatpump consumption is below",
           "sv": "Föregående timmes värmepumpsförbrukning är under"
         },
+        "titleFormatted": {
+          "en": "Previous hour heatpump consumption is below [[threshold_kwh]] kWh",
+          "sv": "Föregående timmes värmepumpsförbrukning är under [[threshold_kwh]] kWh"
+        },
         "args": [
           {
             "name": "device",
@@ -294,11 +329,17 @@
             "step": 0.1
           }
         ],
+        "platforms": [
+          "local"
+        ],
         "id": "previous_hour_heatpump_consumption_below"
       },
       {
         "title": {
           "en": "Temperature is above"
+        },
+        "titleFormatted": {
+          "en": "Temperature is above [[threshold_c]] °C"
         },
         "args": [
           {
@@ -315,11 +356,17 @@
             "step": 0.1
           }
         ],
+        "platforms": [
+          "local"
+        ],
         "id": "temperature_above"
       },
       {
         "title": {
           "en": "Temperature is below"
+        },
+        "titleFormatted": {
+          "en": "Temperature is below [[threshold_c]] °C"
         },
         "args": [
           {
@@ -335,6 +382,9 @@
             },
             "step": 0.1
           }
+        ],
+        "platforms": [
+          "local"
         ],
         "id": "temperature_below"
       }
@@ -351,6 +401,9 @@
             "filter": "driver_id=effira_asset"
           }
         ],
+        "platforms": [
+          "local"
+        ],
         "id": "clear_manual_plan"
       },
       {
@@ -364,11 +417,17 @@
             "filter": "driver_id=effira_asset"
           }
         ],
+        "platforms": [
+          "local"
+        ],
         "id": "refresh_asset"
       },
       {
         "title": {
           "en": "Set manual plan"
+        },
+        "titleFormatted": {
+          "en": "Set manual plan to [[action]] from [[start]] until [[end]]"
         },
         "args": [
           {
@@ -424,11 +483,17 @@
             }
           }
         ],
+        "platforms": [
+          "local"
+        ],
         "id": "set_manual_plan"
       },
       {
         "title": {
           "en": "Set manual plan from now"
+        },
+        "titleFormatted": {
+          "en": "Set manual plan to [[action]] for [[duration_minutes]] minutes"
         },
         "args": [
           {
@@ -473,6 +538,9 @@
             "step": 15
           }
         ],
+        "platforms": [
+          "local"
+        ],
         "id": "set_manual_plan_from_now"
       }
     ]
@@ -484,15 +552,15 @@
       },
       "class": "other",
       "platforms": [
-        "local",
-        "cloud"
+        "local"
       ],
       "connectivity": [
         "cloud"
       ],
       "images": {
         "small": "/drivers/effira_asset/assets/images/small.png",
-        "large": "/drivers/effira_asset/assets/images/large.png"
+        "large": "/drivers/effira_asset/assets/images/large.png",
+        "xlarge": "/drivers/effira_asset/assets/images/xlarge.png"
       },
       "capabilities": [
         "measure_temperature",
